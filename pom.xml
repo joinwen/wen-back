@@ -10,7 +10,6 @@
 
     <modules>
         <module>wen-web</module>
-        <module>wen-dao</module>
         <module>wen-business</module>
         <module>wen-asset</module>
         <module>wen-container</module>
@@ -19,6 +18,7 @@
         <module>wen-email</module>
         <module>wen-datasource</module>
         <module>wen-mybatis-plus</module>
+        <module>wen-mybatis-tk</module>
     </modules>
 
     <properties>
@@ -26,6 +26,8 @@
         <mysql.version>5.1.16</mysql.version>
         <druid.version>1.1.17</druid.version>
         <mybatis.plus.version>3.4.2</mybatis.plus.version>
+        <mybatis.tk.version>1.2.4</mybatis.tk.version>
+        <pagehelper.version>1.2.3</pagehelper.version>
         <junit.version>4.12</junit.version>
         <bcrypt.version>2.3</bcrypt.version>
         <skipTests>true</skipTests>
@@ -48,7 +50,7 @@
             </dependency>
             <dependency>
                 <groupId>top.flywen</groupId>
-                <artifactId>wen-dao</artifactId>
+                <artifactId>wen-mybatis-tk</artifactId>
                 <version>${wen.back.version}</version>
             </dependency>
             <dependency>
@@ -85,6 +87,18 @@
                 <groupId>top.flywen</groupId>
                 <artifactId>wen-mybatis-plus</artifactId>
                 <version>${wen.back.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>${mybatis.tk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.alibaba</groupId>
