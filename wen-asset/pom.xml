@@ -6,16 +6,29 @@
 
     <parent>
         <groupId>top.flywen</groupId>
-        <artifactId>wen-back</artifactId>
+        <artifactId>wen</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    <groupId>top.flywen</groupId>
     <artifactId>wen-asset</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-annotation</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-extension</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>top.flywen</groupId>
-    <artifactId>wen-back</artifactId>
+    <artifactId>wen</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -16,10 +16,19 @@
         <module>wen-container</module>
         <module>wen-redis</module>
         <module>wen-quartz</module>
+        <module>wen-email</module>
+        <module>wen-datasource</module>
+        <module>wen-mybatis-plus</module>
     </modules>
 
     <properties>
-        <wen-back.version>1.0.0-SNAPSHOT</wen-back.version>
+        <wen.back.version>1.0.0-SNAPSHOT</wen.back.version>
+        <mysql.version>5.1.16</mysql.version>
+        <druid.version>1.1.17</druid.version>
+        <mybatis.plus.version>3.4.2</mybatis.plus.version>
+        <junit.version>4.12</junit.version>
+        <bcrypt.version>2.3</bcrypt.version>
+        <skipTests>true</skipTests>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
@@ -28,7 +37,121 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.4.2</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
-
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>top.flywen</groupId>
+                <artifactId>wen-email</artifactId>
+                <version>${wen.back.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>top.flywen</groupId>
+                <artifactId>wen-dao</artifactId>
+                <version>${wen.back.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>top.flywen</groupId>
+                <artifactId>wen-asset</artifactId>
+                <version>${wen.back.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>top.flywen</groupId>
+                <artifactId>wen-business</artifactId>
+                <version>${wen.back.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>top.flywen</groupId>
+                <artifactId>wen-quartz</artifactId>
+                <version>${wen.back.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>top.flywen</groupId>
+                <artifactId>wen-redis</artifactId>
+                <version>${wen.back.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>top.flywen</groupId>
+                <artifactId>wen-container</artifactId>
+                <version>${wen.back.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>top.flywen</groupId>
+                <artifactId>wen-datasource</artifactId>
+                <version>${wen.back.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>top.flywen</groupId>
+                <artifactId>wen-mybatis-plus</artifactId>
+                <version>${wen.back.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <scope>runtime</scope>
+                <version>${mysql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-annotation</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.github.t3hnar</groupId>
+                <artifactId>scala-bcrypt_2.10</artifactId>
+                <version>${bcrypt.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <dependencies>
+        <!-- shiro starter-->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring-boot-web-starter</artifactId>
+            <version>1.7.1</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.19.1</version>
+                <configuration>
+                    <skipTests>true</skipTests>    <!--默认关掉单元测试 -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

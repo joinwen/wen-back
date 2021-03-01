@@ -1,0 +1,4 @@
+top\flywen\wen\mp\config\MybatisPlusConfig.class
+top\flywen\wen\mp\mapper\AuthMapper.class
+top\flywen\wen\mp\MpApplication.class
+top\flywen\wen\mp\mapper\UserMapper.class

@@ -6,16 +6,21 @@
 
     <parent>
         <groupId>top.flywen</groupId>
-        <artifactId>wen-back</artifactId>
+        <artifactId>wen</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <groupId>top.flywen</groupId>
     <artifactId>wen-container</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+        </dependency>
+    </dependencies>
 </project>

@@ -6,12 +6,11 @@
 
     <parent>
         <groupId>top.flywen</groupId>
-        <artifactId>wen-back</artifactId>
+        <artifactId>wen</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <groupId>top.flywen</groupId>
     <artifactId>wen-dao</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
