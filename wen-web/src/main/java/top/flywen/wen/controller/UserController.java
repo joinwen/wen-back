@@ -8,9 +8,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import top.flywen.wen.base.BaseResult;
 import top.flywen.wen.business.UserService;
+import top.flywen.wen.config.GlobalConstant;
 import top.flywen.wen.constant.ResponseConstant;
 import top.flywen.wen.domain.MyPage;
 import top.flywen.wen.entity.User;
+import top.flywen.wen.log.annotation.Log;
 
 import java.util.HashMap;
 import java.util.List;
@@ -24,7 +26,9 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/all")
+    @Log("查询所有用户")
     public BaseResult getAllUsers() {
+        System.out.println(GlobalConstant.USER_INFO);
         List<User> allUsers = userService.getAllUsers();
         return new BaseResult(ResponseConstant.SUCCESS_CODE, allUsers);
     }

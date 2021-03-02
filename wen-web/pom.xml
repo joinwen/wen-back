@@ -18,18 +18,30 @@
     </properties>
 
     <dependencies>
+        <!--  wen-container module  -->
         <dependency>
             <groupId>top.flywen</groupId>
             <artifactId>wen-container</artifactId>
         </dependency>
-        <dependency>
-            <groupId>top.flywen</groupId>
-            <artifactId>wen-asset</artifactId>
-        </dependency>
+
+        <!--  wen-business module -->
         <dependency>
             <groupId>top.flywen</groupId>
             <artifactId>wen-business</artifactId>
         </dependency>
+
+        <!--  wen-config module -->
+        <dependency>
+            <groupId>top.flywen</groupId>
+            <artifactId>wen-config</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>top.flywen</groupId>
+            <artifactId>wen-log</artifactId>
+        </dependency>
+
+        <!--  web starter  -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -40,11 +52,21 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <!--  shiro starter -->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring-boot-web-starter</artifactId>
+            <version>${shiro.starter.version}</version>
+        </dependency>
+
+        <!--  test starter  -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
     <build>
         <plugins>

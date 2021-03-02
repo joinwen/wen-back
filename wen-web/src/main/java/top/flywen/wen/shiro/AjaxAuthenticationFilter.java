@@ -11,24 +11,25 @@ import javax.servlet.ServletOutputStream;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 public class AjaxAuthenticationFilter extends FormAuthenticationFilter {
     @Override
-    protected boolean onAccessDenied(ServletRequest servletRequest, ServletResponse servletResponse) throws Exception {
+    protected boolean onAccessDenied(ServletRequest servletRequest, ServletResponse servletResponse) throws IOException {
         HttpServletResponse response= (HttpServletResponse) servletResponse;
         ServletOutputStream writer = response.getOutputStream();
-        BaseResult result=new BaseResult();
+        BaseResult result = new BaseResult();
         try{
             result.setCode(ResponseConstant.ERROR_CODE);
             result.setMessage("认证失败");
             ObjectMapper objectMapper = new ObjectMapper();
-            byte[] bytes = objectMapper.writeValueAsString(result).getBytes();
+            byte [] bytes = objectMapper.writeValueAsBytes(result);
             response.setCharacterEncoding("utf-8");
             response.setContentType("application/json");
             writer.write(bytes);
         }catch (Exception e){
         }finally {
-            if(null!=writer){
+            if(null != writer){
                 writer.flush();
                 writer.close();
             }

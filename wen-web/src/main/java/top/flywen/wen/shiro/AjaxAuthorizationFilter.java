@@ -15,25 +15,23 @@ import java.io.IOException;
 
 public class AjaxAuthorizationFilter extends PermissionsAuthorizationFilter {
     @Override
-    protected boolean onAccessDenied(ServletRequest request, ServletResponse response) throws IOException {
-        HttpServletResponse response1= (HttpServletResponse) response;
-        ServletOutputStream outputStream = response.getOutputStream();
-        BaseResult result=new BaseResult();
+    protected boolean onAccessDenied(ServletRequest servletRequest, ServletResponse servletResponse) throws IOException {
+        HttpServletResponse response= (HttpServletResponse) servletResponse;
+        ServletOutputStream writer = response.getOutputStream();
+        BaseResult result= new BaseResult();
         try{
-
-            result.setMessage("鉴权失败");
             result.setCode(ResponseConstant.ERROR_CODE);
+            result.setMessage("鉴权失败");
             ObjectMapper objectMapper = new ObjectMapper();
-            byte[] bytes = objectMapper.writeValueAsString(result).getBytes();
+            byte[] bytes = objectMapper.writeValueAsBytes(result);
             response.setCharacterEncoding("utf-8");
             response.setContentType("application/json");
-            outputStream.write(bytes);
+            writer.write(bytes);
         }catch (Exception e){
-
         }finally {
-            if(null!=outputStream){
-                outputStream.flush();
-                outputStream.close();
+            if(writer != null){
+                writer.flush();
+                writer.close();
             }
         }
         return false;

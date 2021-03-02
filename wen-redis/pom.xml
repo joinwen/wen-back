@@ -9,7 +9,6 @@
         <artifactId>wen</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    <groupId>top.flywen</groupId>
     <artifactId>wen-redis</artifactId>
 
     <properties>

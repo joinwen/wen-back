@@ -27,8 +27,8 @@ public class BaseRealm extends AuthorizingRealm {
         if(user == null) {
             throw new UnknownAccountException();
         }
-        ByteSource bytes = ByteSource.Util.bytes(user.getSalt());
-        SimpleAuthenticationInfo simpleAuthenticationInfo = new SimpleAuthenticationInfo(user,user.getSalt(),bytes,getName());
+        ByteSource bytes = ByteSource.Util.bytes(user.getPassword());
+        SimpleAuthenticationInfo simpleAuthenticationInfo = new SimpleAuthenticationInfo(user,user.getPassword(),bytes,getName());
         SecurityUtils.getSubject().getSession().setAttribute(USER_INFO, user);
         return simpleAuthenticationInfo;
     }

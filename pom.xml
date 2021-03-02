@@ -19,18 +19,21 @@
         <module>wen-datasource</module>
         <module>wen-mybatis-plus</module>
         <module>wen-mybatis-tk</module>
+        <module>wen-log</module>
+        <module>wen-config</module>
     </modules>
 
     <properties>
         <wen.back.version>1.0.0-SNAPSHOT</wen.back.version>
         <mysql.version>5.1.16</mysql.version>
-        <druid.version>1.1.17</druid.version>
-        <mybatis.plus.version>3.4.2</mybatis.plus.version>
-        <mybatis.tk.version>1.2.4</mybatis.tk.version>
-        <pagehelper.version>1.2.3</pagehelper.version>
+        <druid.starter.version>1.1.17</druid.starter.version>
+        <mybatis.starter.version>2.1.4</mybatis.starter.version>
+        <mybatis.plus.starter.version>3.4.2</mybatis.plus.starter.version>
+        <mybatis.tk.starter.version>1.2.4</mybatis.tk.starter.version>
+        <pagehelper.starter.version>1.2.3</pagehelper.starter.version>
         <junit.version>4.12</junit.version>
         <bcrypt.version>2.3</bcrypt.version>
-        <skipTests>true</skipTests>
+        <shiro.starter.version>1.7.1</shiro.starter.version>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
@@ -43,110 +46,164 @@
     </parent>
     <dependencyManagement>
         <dependencies>
+            <!--  wen-email module  -->
             <dependency>
                 <groupId>top.flywen</groupId>
                 <artifactId>wen-email</artifactId>
                 <version>${wen.back.version}</version>
             </dependency>
+
+            <!--  wen-mybatis-plus module  -->
             <dependency>
                 <groupId>top.flywen</groupId>
                 <artifactId>wen-mybatis-tk</artifactId>
                 <version>${wen.back.version}</version>
             </dependency>
+
+            <!--  wen-asset module  -->
             <dependency>
                 <groupId>top.flywen</groupId>
                 <artifactId>wen-asset</artifactId>
                 <version>${wen.back.version}</version>
             </dependency>
+
+            <!--  wen-business module  -->
             <dependency>
                 <groupId>top.flywen</groupId>
                 <artifactId>wen-business</artifactId>
                 <version>${wen.back.version}</version>
             </dependency>
+
+            <!--  wen-quartz module  -->
             <dependency>
                 <groupId>top.flywen</groupId>
                 <artifactId>wen-quartz</artifactId>
                 <version>${wen.back.version}</version>
             </dependency>
+
+            <!--  wen-redis module  -->
             <dependency>
                 <groupId>top.flywen</groupId>
                 <artifactId>wen-redis</artifactId>
                 <version>${wen.back.version}</version>
             </dependency>
+
+            <!-- wen-container module  -->
             <dependency>
                 <groupId>top.flywen</groupId>
                 <artifactId>wen-container</artifactId>
                 <version>${wen.back.version}</version>
             </dependency>
+
+            <!--  wen-datasource module  -->
             <dependency>
                 <groupId>top.flywen</groupId>
                 <artifactId>wen-datasource</artifactId>
                 <version>${wen.back.version}</version>
             </dependency>
+
+            <!--  wen-log module  -->
+            <dependency>
+                <groupId>top.flywen</groupId>
+                <artifactId>wen-log</artifactId>
+                <version>${wen.back.version}</version>
+            </dependency>
+
+            <!--  wen-mybatis-plus module  -->
             <dependency>
                 <groupId>top.flywen</groupId>
                 <artifactId>wen-mybatis-plus</artifactId>
                 <version>${wen.back.version}</version>
             </dependency>
 
+            <!--  wen-config module  -->
+            <dependency>
+                <groupId>top.flywen</groupId>
+                <artifactId>wen-config</artifactId>
+                <version>${wen.back.version}</version>
+            </dependency>
 
+            <!-- mybatis starter -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.starter.version}</version>
+            </dependency>
+
+            <!--  通用 mapper starter  -->
             <dependency>
                 <groupId>tk.mybatis</groupId>
                 <artifactId>mapper-spring-boot-starter</artifactId>
-                <version>${mybatis.tk.version}</version>
+                <version>${mybatis.tk.starter.version}</version>
             </dependency>
+
+            <!--  page-helper starter  -->
             <dependency>
                 <groupId>com.github.pagehelper</groupId>
                 <artifactId>pagehelper-spring-boot-starter</artifactId>
-                <version>${pagehelper.version}</version>
+                <version>${pagehelper.starter.version}</version>
             </dependency>
+
+            <!-- druid starter  -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
-                <version>${druid.version}</version>
+                <version>${druid.starter.version}</version>
             </dependency>
+
+            <!--  mysql driver -->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <scope>runtime</scope>
                 <version>${mysql.version}</version>
             </dependency>
+
+            <!--  mybatis-plus starter  -->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>${mybatis.plus.version}</version>
+                <version>${mybatis.plus.starter.version}</version>
             </dependency>
+
+            <!--  mybatis-plus-annotation -->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-annotation</artifactId>
-                <version>${mybatis.plus.version}</version>
+                <version>${mybatis.plus.starter.version}</version>
             </dependency>
+
+            <!--  mybatis-plus-extension -->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-extension</artifactId>
-                <version>${mybatis.plus.version}</version>
+                <version>${mybatis.plus.starter.version}</version>
             </dependency>
+
+            <!--  junit -->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
                 <scope>test</scope>
             </dependency>
+
+            <!--  bcrypt -->
             <dependency>
                 <groupId>com.github.t3hnar</groupId>
                 <artifactId>scala-bcrypt_2.10</artifactId>
                 <version>${bcrypt.version}</version>
             </dependency>
+
+            <!--  shiro starter -->
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-spring-boot-web-starter</artifactId>
+                <version>${shiro.starter.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
-    <dependencies>
-        <!-- shiro starter-->
-        <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-spring-boot-web-starter</artifactId>
-            <version>1.7.1</version>
-        </dependency>
-    </dependencies>
     <build>
         <plugins>
             <plugin>
@@ -163,7 +220,8 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.19.1</version>
                 <configuration>
-                    <skipTests>true</skipTests>    <!--默认关掉单元测试 -->
+                    <!--默认关掉单元测试 -->
+                    <skipTests>true</skipTests>
                 </configuration>
             </plugin>
         </plugins>

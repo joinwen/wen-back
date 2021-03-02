@@ -1,7 +1,6 @@
 package top.flywen.wen.business.impl;
 
 import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +16,12 @@ import java.util.Map;
 
 @Service
 public class AuthServiceImpl implements AuthService {
+
     @Autowired
     private AuthMapper authMapper;
     @Override
     public User findUserByName(String username, Integer isSys) {
-        Map map = new HashMap<String, Object>();
+        Map<String, Object> map = new HashMap<String, Object>();
         map.put("username", username);
         map.put("is_sys", isSys);
         List<User> list = authMapper.selectByMap(map);
@@ -48,8 +48,10 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public User register(User user) {
-        String hashpw = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
-        user.setSalt(hashpw);
+        String salt = BCrypt.gensalt(),
+          hashpw = BCrypt.hashpw(user.getPassword(), salt);
+        user.setPassword(hashpw);
+        user.setSalt(salt);
         int insert = authMapper.insert(user);
         return user;
     }

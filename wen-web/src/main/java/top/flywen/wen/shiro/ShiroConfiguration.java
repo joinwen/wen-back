@@ -1,15 +1,12 @@
 package top.flywen.wen.shiro;
 
-import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.authc.credential.CredentialsMatcher;
 import org.apache.shiro.mgt.RememberMeManager;
 import org.apache.shiro.realm.Realm;
-import org.apache.shiro.spring.LifecycleBeanPostProcessor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
-import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.mgt.CookieRememberMeManager;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.apache.shiro.web.servlet.Cookie;
@@ -58,6 +55,7 @@ public class ShiroConfiguration {
         return shiroFilterFactoryBean;
     }
 
+    @Bean
     public Realm baseRealm() {
         BaseRealm realm = new BaseRealm();
         realm.setCredentialsMatcher(new CredentialsMatcher() {
