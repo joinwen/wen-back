@@ -22,6 +22,7 @@
         <module>wen-log</module>
         <module>wen-config</module>
         <module>wen-thymeleaf</module>
+        <module>wen-knife4j</module>
     </modules>
 
     <properties>
@@ -34,6 +35,7 @@
         <pagehelper.starter.version>1.2.3</pagehelper.starter.version>
         <junit.version>4.12</junit.version>
         <bcrypt.version>2.3</bcrypt.version>
+        <knife4j.version>2.0.7</knife4j.version>
         <shiro.starter.version>1.7.1</shiro.starter.version>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -121,6 +123,13 @@
             <dependency>
                 <groupId>top.flywen</groupId>
                 <artifactId>wen-config</artifactId>
+                <version>${wen.back.version}</version>
+            </dependency>
+
+            <!--  wen-config module  -->
+            <dependency>
+                <groupId>top.flywen</groupId>
+                <artifactId>wen-knife4j</artifactId>
                 <version>${wen.back.version}</version>
             </dependency>
 
