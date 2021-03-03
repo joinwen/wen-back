@@ -21,6 +21,7 @@
         <module>wen-mybatis-tk</module>
         <module>wen-log</module>
         <module>wen-config</module>
+        <module>wen-thymeleaf</module>
     </modules>
 
     <properties>
@@ -120,6 +121,13 @@
             <dependency>
                 <groupId>top.flywen</groupId>
                 <artifactId>wen-config</artifactId>
+                <version>${wen.back.version}</version>
+            </dependency>
+
+            <!--  wen-thymeleaf module  -->
+            <dependency>
+                <groupId>top.flywen</groupId>
+                <artifactId>wen-thymeleaf</artifactId>
                 <version>${wen.back.version}</version>
             </dependency>
 
