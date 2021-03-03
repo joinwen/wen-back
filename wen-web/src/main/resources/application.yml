@@ -4,3 +4,4 @@ spring:
       - container
       - datasource
       - email
+      - knife4j

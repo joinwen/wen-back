@@ -46,6 +46,12 @@
             <artifactId>wen-log</artifactId>
         </dependency>
 
+        <!--  wen-knife4j module -->
+        <dependency>
+            <groupId>top.flywen</groupId>
+            <artifactId>wen-knife4j</artifactId>
+        </dependency>
+
         <!--  web starter  -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

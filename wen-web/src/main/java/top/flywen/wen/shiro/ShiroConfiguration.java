@@ -48,6 +48,13 @@ public class ShiroConfiguration {
         shiroFilterFactoryBean.setFilters(filters);
         Map<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
 
+        // ====== swagger 资源放行 ======
+        filterChainDefinitionMap.put("/doc.html", "anon");
+        filterChainDefinitionMap.put("/swagger-resources/**", "anon");
+        filterChainDefinitionMap.put("/v2/**", "anon");
+        filterChainDefinitionMap.put("/webjars/**", "anon");
+        filterChainDefinitionMap.put("/favicon.ico", "anon");
+
         filterChainDefinitionMap.put("/auth/login", "anon");
         filterChainDefinitionMap.put("/auth/register", "anon");
         filterChainDefinitionMap.put("/**", "authc");

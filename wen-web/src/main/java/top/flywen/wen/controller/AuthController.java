@@ -1,5 +1,7 @@
 package top.flywen.wen.controller;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.crypto.hash.Md5Hash;
 import org.apache.shiro.subject.Subject;
@@ -12,12 +14,14 @@ import top.flywen.wen.entity.User;
 
 @RestController
 @RequestMapping("/auth")
+@Api(value = "认证接口", tags = {"认证接口"})
 public class AuthController {
 
     @Autowired
     private AuthService authService;
 
     @PostMapping("/login")
+    @ApiOperation(value = "登录", notes = "登录", httpMethod = "POST")
     public BaseResult login(@RequestBody User user) {
         User login = authService.login(user);
         BaseResult result = new BaseResult(ResponseConstant.ERROR_CODE,"login failure",user);
@@ -29,6 +33,7 @@ public class AuthController {
 
 
     @GetMapping("/logout")
+    @ApiOperation(value = "登出", notes = "登出", httpMethod = "GET")
     public BaseResult logout() {
         Subject subject = SecurityUtils.getSubject();
         subject.logout();
@@ -36,6 +41,7 @@ public class AuthController {
     }
 
     @PostMapping("/register")
+    @ApiOperation(value = "注册", notes = "注册", httpMethod = "POST")
     public BaseResult register(@RequestBody User user) {
         User register = authService.register(user);
         BaseResult result = new BaseResult(ResponseConstant.ERROR_CODE,"register failure", register);
