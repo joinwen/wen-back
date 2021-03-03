@@ -1,9 +1,9 @@
 spring:
   datasource:
     username: root
-    password: root
+    password: zhishun.cai
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/wen?serverTimezone=UTC&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    url: jdbc:mysql://47.100.22.236:3306/wen?serverTimezone=UTC&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
     type: com.alibaba.druid.pool.DruidDataSource
     initialSize: 5
     minIdle: 5
