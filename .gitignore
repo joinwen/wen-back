@@ -7,7 +7,15 @@
 /wen-asset/target/
 /wen-business/target/
 /wen-container/target/
-/wen-dao/target/
 /wen-web/target/
 /wen-redis/target/
 /wen-quartz/target/
+/wen-thymeleaf/target/
+/wen-mybatis-tk/target/
+/wen-mybatis-plus/target/
+/wen-log/target/
+/wen-email/target/
+/wen-datasource/target/
+/wen-config/target/
+/wen-config/target/
+/wen-thymeleaf/wen-thymeleaf.iml

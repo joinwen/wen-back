@@ -1,0 +1,21 @@
+   ffffffffffffffff  lllllll
+  f::::::::::::::::f l:::::l
+ f::::::::::::::::::fl:::::l
+ f::::::fffffff:::::fl:::::l
+ f:::::f       ffffff l::::lyyyyyyy           yyyyyyywwwwwww           wwwww           wwwwwww eeeeeeeeeeee    nnnn  nnnnnnnn
+ f:::::f              l::::l y:::::y         y:::::y  w:::::w         w:::::w         w:::::wee::::::::::::ee  n:::nn::::::::nn
+f:::::::ffffff        l::::l  y:::::y       y:::::y    w:::::w       w:::::::w       w:::::we::::::eeeee:::::een::::::::::::::nn
+f::::::::::::f        l::::l   y:::::y     y:::::y      w:::::w     w:::::::::w     w:::::we::::::e     e:::::enn:::::::::::::::n
+f::::::::::::f        l::::l    y:::::y   y:::::y        w:::::w   w:::::w:::::w   w:::::w e:::::::eeeee::::::e  n:::::nnnn:::::n
+f:::::::ffffff        l::::l     y:::::y y:::::y          w:::::w w:::::w w:::::w w:::::w  e:::::::::::::::::e   n::::n    n::::n
+ f:::::f              l::::l      y:::::y:::::y            w:::::w:::::w   w:::::w:::::w   e::::::eeeeeeeeeee    n::::n    n::::n
+ f:::::f              l::::l       y:::::::::y              w:::::::::w     w:::::::::w    e:::::::e             n::::n    n::::n
+f:::::::f            l::::::l       y:::::::y                w:::::::w       w:::::::w     e::::::::e            n::::n    n::::n
+f:::::::f            l::::::l        y:::::y                  w:::::w         w:::::w       e::::::::eeeeeeee    n::::n    n::::n
+f:::::::f            l::::::l       y:::::y                    w:::w           w:::w         ee:::::::::::::e    n::::n    n::::n
+fffffffff            llllllll      y:::::y                      www             www            eeeeeeeeeeeeee    nnnnnn    nnnnnn
+                                  y:::::y
+                                 y:::::y
+                                y:::::y
+                               y:::::y
+                              yyyyyyy

@@ -38,6 +38,11 @@
 
         <dependency>
             <groupId>top.flywen</groupId>
+            <artifactId>wen-email</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>top.flywen</groupId>
             <artifactId>wen-log</artifactId>
         </dependency>
 
