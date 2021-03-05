@@ -22,6 +22,7 @@
         <module>wen-log</module>
         <module>wen-config</module>
         <module>wen-thymeleaf</module>
+        <module>wen-freemarker</module>
         <module>wen-knife4j</module>
     </modules>
 

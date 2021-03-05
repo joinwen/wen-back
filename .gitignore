@@ -19,3 +19,6 @@
 /wen-config/target/
 /wen-config/target/
 /wen-thymeleaf/wen-thymeleaf.iml
+/wen-freemarker/wen-freemarker.iml
+/wen-freemarker/target/
+/wen-knife4j/target/

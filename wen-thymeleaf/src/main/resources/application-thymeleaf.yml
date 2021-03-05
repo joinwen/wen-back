@@ -1,0 +1,6 @@
+spring:
+  thymeleaf:
+    cache: true
+    check-template-location: true
+    enabled: true
+    prefix: classpath:/pages/

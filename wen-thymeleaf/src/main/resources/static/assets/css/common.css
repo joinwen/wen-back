@@ -1,0 +1,32 @@
+.tx-c {
+  text-align: center;
+}
+.tx-l {
+  text-align: left;
+}
+.tx-r {
+  text-align: right;
+}
+.px-1 {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.px-2 {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+.py-1 {
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+.py-2 {
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+
+.p-1 {
+  padding: 1em;
+}
+.p-2 {
+  padding: 2em;
+}

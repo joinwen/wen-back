@@ -52,6 +52,11 @@
             <artifactId>wen-knife4j</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>top.flywen</groupId>
+            <artifactId>wen-thymeleaf</artifactId>
+        </dependency>
+
         <!--  web starter  -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

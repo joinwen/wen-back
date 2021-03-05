@@ -9,22 +9,18 @@
         <artifactId>wen</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    <artifactId>wen-thymeleaf</artifactId>
+    <artifactId>wen-freemarker</artifactId>
     <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
     </dependencies>
+
 </project>
