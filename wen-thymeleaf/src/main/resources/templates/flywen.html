@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org" xmlns:score="http://thymeleafexamples">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
@@ -10,5 +10,26 @@
 </head>
 <body>
   <h2 class="tx-c">hello,flywen</h2>
+  <h3>${...}:Variable expressions.</h3>
+  <button th:text="${message.description}"></button>
+
+  <h3>*{...}:Selection expressions</h3>
+  <div th:object="${message}">
+    <button th:text="*{gender}"></button>
+  </div>
+
+  <h3>#{...}:Message (i18n) expressions.</h3>
+  <button th:text="#{home.welcome(${message.name})}"></button>
+
+  <h3>@{...}:Link(URL) expressions.</h3>
+  <img th:src="@{/assets/css/apple.png}" />
+
+  <h3>~{...}:Fragment expressions.</h3>
+  <div th:insert="~{footer::copy}"></div>
+
+  <h3>th:each</h3>
+  <tr th:each="hobby : ${message.hobbies}">
+    <td th:text="${hobby}"></td>
+  </tr>
 </body>
 </html>
