@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>top.flywen</groupId>
-        <artifactId>wen</artifactId>
+        <groupId>top.flywen.wen</groupId>
+        <artifactId>wen-back</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <artifactId>wen-freemarker</artifactId>
