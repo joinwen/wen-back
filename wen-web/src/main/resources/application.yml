@@ -5,3 +5,4 @@ spring:
       - datasource
       - email
       - knife4j
+      - thymeleaf

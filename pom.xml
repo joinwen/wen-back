@@ -24,6 +24,7 @@
         <module>wen-thymeleaf</module>
         <module>wen-freemarker</module>
         <module>wen-knife4j</module>
+        <module>wen-learn</module>
     </modules>
 
     <properties>
