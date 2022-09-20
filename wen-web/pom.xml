@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>top.flywen.wen</groupId>
-        <artifactId>wen-back</artifactId>
+        <groupId>top.flywen</groupId>
+        <artifactId>wen</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <groupId>top.flywen.wen</groupId>
@@ -20,40 +20,43 @@
     <dependencies>
         <!--  wen-container module  -->
         <dependency>
-            <groupId>top.flywen.wen</groupId>
+            <groupId>top.flywen</groupId>
             <artifactId>wen-container</artifactId>
         </dependency>
 
         <!--  wen-business module -->
         <dependency>
-            <groupId>top.flywen.wen</groupId>
+            <groupId>top.flywen</groupId>
             <artifactId>wen-business</artifactId>
         </dependency>
 
         <!--  wen-config module -->
         <dependency>
-            <groupId>top.flywen.wen</groupId>
+            <groupId>top.flywen</groupId>
             <artifactId>wen-config</artifactId>
         </dependency>
 
+        <!-- wen-email module -->
         <dependency>
-            <groupId>top.flywen.wen</groupId>
+            <groupId>top.flywen</groupId>
             <artifactId>wen-email</artifactId>
         </dependency>
 
+        <!-- wen-log module -->
         <dependency>
-            <groupId>top.flywen.wen</groupId>
+            <groupId>top.flywen</groupId>
             <artifactId>wen-log</artifactId>
         </dependency>
 
         <!--  wen-knife4j module -->
         <dependency>
-            <groupId>top.flywen.wen</groupId>
+            <groupId>top.flywen</groupId>
             <artifactId>wen-knife4j</artifactId>
         </dependency>
 
+        <!-- wen-thymeleaf module -->
         <dependency>
-            <groupId>top.flywen.wen</groupId>
+            <groupId>top.flywen</groupId>
             <artifactId>wen-thymeleaf</artifactId>
         </dependency>
 
